@@ -1,0 +1,40 @@
+body{
+  background-color: D1E3F7
+}
+
+.form-container {
+  background-color: #D1E3F7;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  margin: 40px auto;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #3F8EFc;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2a6cc8;
+}

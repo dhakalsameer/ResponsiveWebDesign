@@ -1,0 +1,36 @@
+body{
+  background-color: #f4f4f4;
+}
+
+.color-grid{
+  display: flex;
+  gap: 10px;
+}
+.color-box{
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.color1{
+  background-color: #737BD2;
+  border: 1px solid black;
+}
+
+
+.color2 {
+  background-color: rgb(21, 56, 96);
+}
+
+
+.color3 {
+  background-color: lightblue;
+}
+
+.color4 {
+  background-color: hsl(195, 50%, 55%);
+}
+
+.color5 {
+  background-color: #BC8909;
+}

@@ -1,0 +1,29 @@
+body{
+  text-align : center;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"]{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid black;
+}
+input[type="checkbox"]:checked{
+  background-color: black;
+  border-color: red;
+}
+
+.feature-card input[type="checkbox"]:checked::after {
+      content: "✓";  
+      background-color: white;                 
+      color: black;
+      font-size: 18px;
+      /* position: absolute; */
+    
+      transform: translate(-50%, -50%);
+
+    }

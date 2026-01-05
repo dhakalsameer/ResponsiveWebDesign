@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Inventory</title>
+
+  <style>
+   
+    span {
+      display: inline-block;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    tr[class="read"] {
+      background-image: linear-gradient(135deg, #d4fc79, #96e6a1);
+    }
+
+    tr[class="to-read"] {
+      background-image: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    }
+
+    tr[class="in-progress"] {
+      background-image: linear-gradient(135deg, #fddb92, #d1fdff);
+    }
+
+    tr[class="to-read"] span[class="status"] {
+      border: 2px solid #7b2cbf;
+      background-image: linear-gradient(90deg, #c77dff, #9d4edd);
+    }
+
+    tr[class="read"] span[class="status"] {
+      border: 2px solid #2d6a4f;
+      background-image: linear-gradient(90deg, #95d5b2, #52b788);
+    }
+
+    tr[class="in-progress"] span[class="status"] {
+      border: 2px solid #f48c06;
+      background-image: linear-gradient(90deg, #ffd166, #f77f00);
+    }
+
+    /* ---------- Shared Status & Rate Box ---------- */
+    span[class="status"],
+    span[class^="rate"] {
+      height: 24px;
+      width: 90px;
+      padding: 4px;
+    }
+
+    /* ---------- Rating Dots ---------- */
+    span[class^="rate"] > span {
+      border: 1px solid #333;
+      border-radius: 50%;
+      margin: 2px;
+      height: 12px;
+      width: 12px;
+      background-color: #eee;
+    }
+
+    /* ---------- Rating Fill Levels ---------- */
+    span[class~="one"] > span:first-child {
+      background-image: linear-gradient(to right, #ff4d4d, #ff9999);
+    }
+
+    span[class~="two"] > span:nth-child(-n+2) {
+      background-image: linear-gradient(to right, #ffa500, #ffd699);
+    }
+
+    span[class~="three"] > span {
+      background-image: linear-gradient(to right, #2ec4b6, #90dbf4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Book Inventory</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="read">
+        <td>Clean Code</td>
+        <td>Robert C. Martin</td>
+        <td>Programming</td>
+        <td>
+          <span class="status">Read</span>
+        </td>
+        <td>
+          <span class="rate three">
+            <span></span><span></span><span></span>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="to-read">
+        <td>Atomic Habits</td>
+        <td>James Clear</td>
+        <td>Self-Help</td>
+        <td>
+          <span class="status">To Read</span>
+        </td>
+        <td>
+          <span class="rate">
+            <span></span><span></span><span></span>
+          </span>
+        </td>
+      </tr>
+
+      <tr class="in-progress">
+        <td>Deep Work</td>
+        <td>Cal Newport</td>
+        <td>Productivity</td>
+        <td>
+          <span class="status">In Progress</span>
+        </td>
+        <td>
+          <span class="rate">
+            <span></span><span></span><span></span>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
